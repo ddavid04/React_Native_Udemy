@@ -1,8 +1,11 @@
-# React Native
-## React Native
+# React Native Universal .gitignore
+## Applies to all React Native projects in subdirectories
 ## https://reactnative.dev/
 
+# Environment files
 .env*
+!.env.example
+!.env.template
 
 # OSX
 .DS_Store
@@ -14,9 +17,9 @@ Icon
 ehthumbs.db
 Thumbs.db
 
-# Xcode
-build/
-DerivedData/
+# Xcode - using glob patterns for subdirectories
+**/ios/build/
+**/ios/DerivedData/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -25,7 +28,7 @@ DerivedData/
 !default.mode2v3
 *.perspectivev3
 !default.perspectivev3
-xcuserdata/
+**/xcuserdata/
 *.xccheckout
 *.moved-aside
 *.xcuserstate
@@ -36,20 +39,21 @@ xcuserdata/
 .xcworkspace
 
 # Android/IntelliJ
-.gradle
-.idea/
-local.properties
+**/.gradle/
+**/.idea/
+**/local.properties
 *.iml
 *.hprof
 
-# node.js
-node_modules/
+# node.js - CRITICAL: Using glob patterns for subdirectories
+**/node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
-package-lock.json
-yarn.lock
+**/package-lock.json
+**/yarn.lock
+**/pnpm-lock.yaml
 
 # Babel
 babel.config.js
@@ -61,61 +65,55 @@ babel.config.js
 *.bundle
 
 # Expo
-.expo/
-.expo-shared/
+**/.expo/
+**/.expo-shared/
+**/web-build/
 
-# Android
-android/.gradle
-android/.idea
-android/app/build/
-android/build/
-android/captures/
-android/.externalNativeBuild
-android/.cxx/
+# Android - using glob patterns
+**/android/.gradle
+**/android/.idea
+**/android/app/build/
+**/android/build/
+**/android/captures/
+**/android/.externalNativeBuild
+**/android/.cxx/
 *.apk
 *.ap_
 *.aab
 *.keystore
 *.jks
 
-# iOS
-ios/Pods/
-ios/**/*.mode1v3
-ios/**/*.mode2v3
-ios/**/*.moved-aside
-ios/**/*.pbxuser
-ios/**/*.perspectivev3
-ios/**/*.sync/
-ios/**/*.xcuserstate
-ios/**/*.xcworkspace
-ios/!(Podfile).lock
-ios/.xcode.env.local
-ios/build/
+# iOS - using glob patterns
+**/ios/Pods/
+**/ios/**/*.mode1v3
+**/ios/**/*.mode2v3
+**/ios/**/*.moved-aside
+**/ios/**/*.pbxuser
+**/ios/**/*.perspectivev3
+**/ios/**/*.sync/
+**/ios/**/*.xcuserstate
+**/ios/**/*.xcworkspace
+**/ios/!(Podfile).lock
+**/ios/.xcode.env.local
+**/ios/build/
 
 # Coverage
-coverage/
+**/coverage/
 *.lcov
 
-# Env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-.env
-
 # Fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots
-fastlane/test_output
-fastlane/readme.md
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots
+**/fastlane/test_output
+**/fastlane/readme.md
 
 # Temporary files
 *.tmp
 *.temp
 
 # Logs
-logs/
+**/logs/
 *.log
 
 # Misc
@@ -124,14 +122,15 @@ logs/
 *~
 
 # Testing
-/test-assets/
-/__tests__/coverage/
+**/__tests__/coverage/
+**/test-assets/
 
-# Expo
-.expo/
-.expo-shared/
-.expo/
-web-build/
+# Jest
+**/jest/
+**/jest-test-results.json
+
+# TypeScript
+*.tsbuildinfo
 
 # Windows
 [Tt]humbs.db
@@ -148,11 +147,73 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-# Jest
-jest/
-jest-test-results.json
+# React Native CLI cache
+$RN_CACHE_DIR/
+.react/
+.rncache/
+
+# Specific patterns for your repo structure
+react-native-projects/**/node_modules/
+react-native-projects/**/ios/build/
+react-native-projects/**/ios/Pods/
+react-native-projects/**/android/build/
+react-native-projects/**/android/app/build/
+react-native-projects/**/.expo/
+react-native-projects/**/.expo-shared/
+
+# Project-specific build outputs
+**/.build/
+**/dist/
+**/out/
+
+# IDE files (add more as needed)
+.vscode/
+.idea/
+*.swp
+*.sublime-*
+
+# Bundle files
+*.jsbundle
+*.bundle
+*.map
+
+# macOS files
+._*
+
+# Linux files
+*~
+
+# Temporary folders
+.temp/
+tmp/
+
+# Package manager specific
+.pnpm-store/
+.yarn/
+.yarnrc.yml
+.yarn/
+.pnp.*
 
 
-# TypeScript
-*.tsbuildinfo
+# ==============================================
+# GLOB PATTERNS FOR SUBDIRECTORIES
+# ==============================================
 
+# Apply all patterns to subdirectories using globs
+**/node_modules/
+**/ios/build/
+**/ios/Pods/
+**/android/build/
+**/android/app/build/
+**/.expo/
+**/.expo-shared/
+**/.gradle/
+**/.idea/
+**/coverage/
+**/*.apk
+**/*.aab
+**/local.properties
+**/xcuserdata/
+**/DerivedData/
+**/.externalNativeBuild
+**/.cxx/
