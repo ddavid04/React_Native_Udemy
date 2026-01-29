@@ -2,6 +2,8 @@
 ## React Native
 ## https://reactnative.dev/
 
+.env*
+
 # OSX
 .DS_Store
 .AppleDouble
