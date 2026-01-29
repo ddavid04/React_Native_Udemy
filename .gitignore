@@ -1,0 +1,156 @@
+# React Native
+## React Native
+## https://reactnative.dev/
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Xcode
+build/
+DerivedData/
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+xcuserdata/
+*.xccheckout
+*.moved-aside
+*.xcuserstate
+*.xcworkspace
+!default.xcworkspace
+*.xcscheme
+!default.xcscheme
+.xcworkspace
+
+# Android/IntelliJ
+.gradle
+.idea/
+local.properties
+*.iml
+*.hprof
+
+# node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+package-lock.json
+yarn.lock
+
+# Babel
+babel.config.js
+
+# Metro
+.history/
+*.generated.js
+*.resolvedmap
+*.bundle
+
+# Expo
+.expo/
+.expo-shared/
+
+# Android
+android/.gradle
+android/.idea
+android/app/build/
+android/build/
+android/captures/
+android/.externalNativeBuild
+android/.cxx/
+*.apk
+*.ap_
+*.aab
+*.keystore
+*.jks
+
+# iOS
+ios/Pods/
+ios/**/*.mode1v3
+ios/**/*.mode2v3
+ios/**/*.moved-aside
+ios/**/*.pbxuser
+ios/**/*.perspectivev3
+ios/**/*.sync/
+ios/**/*.xcuserstate
+ios/**/*.xcworkspace
+ios/!(Podfile).lock
+ios/.xcode.env.local
+ios/build/
+
+# Coverage
+coverage/
+*.lcov
+
+# Env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+fastlane/readme.md
+
+# Temporary files
+*.tmp
+*.temp
+
+# Logs
+logs/
+*.log
+
+# Misc
+*.swp
+*.swo
+*~
+
+# Testing
+/test-assets/
+/__tests__/coverage/
+
+# Expo
+.expo/
+.expo-shared/
+.expo/
+web-build/
+
+# Windows
+[Tt]humbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Jest
+jest/
+jest-test-results.json
+
+
+# TypeScript
+*.tsbuildinfo
+
